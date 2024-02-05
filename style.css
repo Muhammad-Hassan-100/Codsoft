@@ -69,14 +69,14 @@ button:hover {
   background-color: #666;
 }
 
-@keyframes themeRotate {
+/* @keyframes themeRotate {
   0% {
       transform: rotate(0deg);
   }
   100% {
       transform: rotate(1500deg);
   }
-}
+} */
 
 button[onclick="toggleTheme()"] {
   animation: themeRotate 1s linear infinite;
