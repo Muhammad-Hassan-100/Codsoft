@@ -1,0 +1,83 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c4c4c4;
+  transition: background-color 0.5s ease;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+
+.display {
+  grid-column: span 4;
+  padding: 20px;
+  text-align: right;
+  font-size: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #c4c4c4;
+  transition: background-color 0.5s ease;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .display {
+  background-color: #555;
+}
+
+.dark-theme button {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.dark-theme button:hover {
+  background-color: #666;
+}
+
+@keyframes themeRotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(1500deg);
+  }
+}
+
+button[onclick="toggleTheme()"] {
+  animation: themeRotate 1s linear infinite;
+}
